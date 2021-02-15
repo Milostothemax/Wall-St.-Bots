@@ -7,13 +7,13 @@ import tweepy
 auth = tweepy.OAuthHandler(API, SECRET API)
 auth.set_access_token(ACCESS TOKEN, SECRET TOKEN)
 
-#Scrape BBC for Headline text
-url = 'https://www.bbc.co.uk/news'
+#Scrape News for Headline text
+url = "NEWS WEBSITE URL"
 res = requests.get(url)
 html_page = res.content
 soup = BeautifulSoup(html_page, 'html.parser')
 
-tags = soup.find_all(class_='gs-c-promo-heading__title')
+tags = soup.find_all(class_="NEWS WEBSITE HTML CLASS")
 #print(headlines)
 headlines = list()
 
